@@ -1,0 +1,1139 @@
+/* ==========================================================================
+   بروشور اجرای دیجیتال — تور کنسرت سرزمین پدری (استاد وحید تاج)
+   کالیبره‌شده ۱:۱ بر اساس مختصات و سمپل رنگی دقیق 2.png و رفرنس فهرست قطعات
+   ========================================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  direction: rtl;
+  font-family: var(--font-brochure, 'BrochureDefaultVF', Tahoma, sans-serif);
+  font-feature-settings: var(--font-feature-fa, 'ss01' 1);
+  background-color: var(--bg-edge, #16324B);
+  color: var(--text-primary, #FFFFFF);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+/* ---------------- پس‌زمینه کالیبره‌شده دقیق از سمپل پیکسلی 2.png ---------------- */
+.brochure-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background:
+    radial-gradient(56% 52% at 50% 48%, var(--bg-center, #244460) 0%, #1E3C57 52%, var(--bg-edge, #16324B) 100%);
+  padding: 64px 16px 68px;
+}
+
+/* ---------------- ۳+۳ خط طلایی عمودی پله‌ای طرفین صفحه (دقیقاً مطابق 2.png) ---------------- */
+.brochure-rails {
+  position: absolute;
+  inset: 0;
+  max-width: 1056px;
+  margin: 0 auto;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.brochure-rails .rail {
+  position: absolute;
+  width: 2px;
+  background-color: rgba(214, 184, 18, 0.82);
+}
+
+/* سه خط سمت راست */
+.brochure-rails .rail-r-outer { right: 0;    top: 510px; bottom: 0; }
+.brochure-rails .rail-r-mid   { right: 34px; top: 351px; bottom: 160px; }
+.brochure-rails .rail-r-inner { right: 71px; top: 174px; bottom: 338px; }
+
+/* سه خط سمت چپ */
+.brochure-rails .rail-l-outer { left: 0;     top: 510px; bottom: 0; }
+.brochure-rails .rail-l-mid   { left: 34px;  top: 351px; bottom: 160px; }
+.brochure-rails .rail-l-inner { left: 71px;  top: 174px; bottom: 338px; }
+
+@media (max-width: 1120px) {
+  .brochure-rails {
+    max-width: 96%;
+  }
+  .brochure-rails .rail-r-mid,
+  .brochure-rails .rail-l-mid {
+    display: none;
+  }
+  .brochure-rails .rail-r-inner { right: 16px; }
+  .brochure-rails .rail-l-inner { left: 16px; }
+}
+
+@media (max-width: 820px) {
+  .brochure-rails {
+    display: none;
+  }
+}
+
+.brochure-wrap {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   بخش هدر و مستطیل طلایی زاویه‌تیز (652×485، رنگ دقیق #C3A925 -> #BAA12B در 2.png)
+   ========================================================================== */
+.hero-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.hero-stage {
+  position: relative;
+  width: 100%;
+  max-width: 652px;
+  height: 515px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-gold-frame {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 485px;
+  border-radius: 0;
+  background: radial-gradient(
+    54% 62% at 50% 56%,
+    var(--hero-gold-center, #C3A925) 0%,
+    #BDA327 52%,
+    var(--hero-gold-edge, #BAA12B) 100%
+  );
+  z-index: 1;
+}
+
+/* تایپوگرافی صید عشق — عبور ظریف از لبه چپ کادر طلایی مطابق 2.png */
+.hero-logo-seid {
+  position: absolute;
+  z-index: 2;
+  left: -20px;
+  top: 180px;
+  width: calc(172px * var(--left-scale, 1));
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* تایپوگرافی وحید تاج — عبور ظریف از لبه راست کادر طلایی مطابق 2.png */
+.hero-logo-vahid {
+  position: absolute;
+  z-index: 2;
+  right: -50px;
+  top: 183px;
+  width: calc(211px * var(--right-scale, 1));
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* تصویر پرتره استاد وحید تاج (هم‌تراز لبه پایین و ۳۰px بالاتر از سقف کادر طلایی) */
+.hero-portrait {
+  position: relative;
+  z-index: 3;
+  height: calc(515px * var(--subj-scale, 1));
+  max-height: 535px;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom center;
+  margin-bottom: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* عنوان و زیرعنوان هدر */
+.hero-headings {
+  text-align: center;
+  margin-top: 26px;
+  max-width: 652px;
+}
+
+.hero-h1 {
+  margin: 0;
+  font-size: calc(37px * var(--font-scale, 1));
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: var(--heading-ls, -0.045em);
+  color: var(--text-primary, #FFFFFF);
+}
+
+.hero-sub {
+  margin: 6px 0 0;
+  font-size: calc(18px * var(--font-scale, 1));
+  font-weight: 400;
+  line-height: 1.62;
+  letter-spacing: -0.025em;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+/* ردیف بج‌های اطلاعات هدر با گوشه ۶px دقیقاً مطابق 2.png */
+.hero-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  height: 31px;
+  padding: 0 12px;
+  border-radius: 6px;
+  background-color: rgba(29, 59, 85, 0.72);
+  border: 1px solid rgba(201, 173, 30, 0.54);
+  color: #EAEFF4;
+  font-size: calc(12px * var(--font-scale, 1));
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.18s ease;
+}
+
+.hero-pill svg {
+  width: 14px;
+  height: 14px;
+  color: #D0B31E;
+  flex-shrink: 0;
+}
+
+.hero-pill-btn {
+  cursor: pointer;
+}
+
+.hero-pill-btn:hover,
+.hero-pill-link:hover {
+  background-color: rgba(39, 75, 106, 0.94);
+  border-color: rgba(218, 190, 42, 0.85);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   کارت‌های اصلی بروشور (عرض ۶۰۰px مطابق نسبت دقیق 2.png، رنگ زمینه #23435F)
+   ========================================================================== */
+.brochure-cards {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.b-card {
+  width: 100%;
+  background-color: var(--card-bg, #23435F);
+  border: 1px solid rgba(201, 173, 30, 0.44);
+  border-radius: 14px;
+  padding: 26px 26px;
+}
+
+.b-card.figma-min-tracks { min-height: 298px; }
+.b-card.figma-min-musicians { min-height: 254px; }
+.b-card.figma-min-crew { min-height: 254px; }
+.b-card.figma-min-venue { min-height: 196px; }
+
+.card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-head-between {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.card-head-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-accent-bar {
+  display: inline-block;
+  width: 3px;
+  height: 20px;
+  border-radius: 999px;
+  background-color: #D2B418;
+  flex-shrink: 0;
+}
+
+.card-title {
+  margin: 0;
+  font-size: calc(17.5px * var(--font-scale, 1));
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: var(--heading-ls, -0.035em);
+  color: var(--text-primary, #FFFFFF);
+}
+
+/* متن ساده «۱۱ قطعه» سمت چپ بالای خط جداکننده مطابق دقیق 2.png */
+.card-count-pill {
+  color: #BCCAD8;
+  font-size: calc(12.5px * var(--font-scale, 1));
+  font-weight: 500;
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  margin-top: 13px;
+  margin-bottom: 20px;
+  background-color: rgba(196, 173, 36, 0.38);
+}
+
+/* بخش درباره این اجرا */
+.b-card-about .about-body {
+  margin-top: 14px;
+}
+
+.b-card-about .card-divider + .about-body {
+  margin-top: 0;
+}
+
+.about-body p {
+  margin: 0 0 10px;
+  font-size: calc(13.5px * var(--font-scale, 1));
+  font-weight: 400;
+  line-height: 2.04;
+  letter-spacing: -0.01em;
+  color: rgba(240, 246, 251, 0.93);
+}
+
+.about-body p:last-child {
+  margin-bottom: 0;
+}
+
+.about-body.align-justify p {
+  text-align: justify;
+  text-align-last: right;
+}
+
+.about-body.align-right p {
+  text-align: right;
+}
+
+.card-placeholder {
+  margin: 12px 0 4px;
+  text-align: center;
+  color: rgba(215, 228, 238, 0.62);
+  font-size: 13.5px;
+}
+
+/* ==========================================================================
+   فهرست قطعات اجرایی — طراحی دقیق بر اساس image-1.png, image-2.png, image-3.png
+   هماهنگ‌شده با پالت سرمه‌ای نفتی (#23435F / #1B3851) و طلایی آنتیک 2.png
+   ========================================================================== */
+.trk-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.trk-card {
+  background-color: rgba(23, 49, 73, 0.76);
+  border: 1px solid rgba(201, 173, 30, 0.24);
+  border-radius: 12px;
+  padding: 14px 16px;
+  transition: border-color 0.22s ease, background-color 0.22s ease;
+}
+
+.trk-card:hover {
+  border-color: rgba(201, 173, 30, 0.42);
+  background-color: rgba(21, 46, 69, 0.9);
+}
+
+.trk-card.is-playing,
+.trk-card.is-lyrics-open {
+  border-color: rgba(206, 178, 29, 0.56);
+  background-color: rgba(20, 44, 66, 0.94);
+}
+
+.trk-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.trk-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex: 1;
+}
+
+/* دایره شماره قطعه سمت راست (مطابق image-1/2/3.png) */
+.trk-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 173, 30, 0.48);
+  color: #E2C73B;
+  font-size: calc(13.8px * var(--font-scale, 1));
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trk-titles {
+  min-width: 0;
+  flex: 1;
+}
+
+.trk-name {
+  margin: 0;
+  font-size: calc(15.2px * var(--font-scale, 1));
+  font-weight: 700;
+  line-height: 1.48;
+  color: #FFFFFF;
+}
+
+/* خط متادیتای زیر عنوان قطعه با فاصله تمیز بدون بولت (دقیقاً مطابق image-1.png و image-2.png) */
+.trk-sub {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  column-gap: 14px;
+  row-gap: 3px;
+  font-size: calc(12px * var(--font-scale, 1));
+  line-height: 1.65;
+}
+
+.trk-meta-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.trk-lbl {
+  color: #DEC337;
+  font-weight: 600;
+}
+
+.trk-val {
+  color: #C7D8E6;
+  font-weight: 400;
+}
+
+.trk-note {
+  color: #DFB653;
+  font-weight: 500;
+}
+
+/* دکمه‌های دایره‌ای سمت چپ (دایره توپر پخش + دایره خطی بازشوی شعر دقیقاً مانند image-2.png) */
+.trk-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.trk-circle-btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.16s ease;
+}
+
+.trk-circle-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* دکمه پخش صوت: دایره توپر طلایی آنتیک مطابق دایره توپر در image-2.png و image-3.png */
+.trk-play-toggle {
+  background-color: #C3A925;
+  border: 1px solid #D4B92B;
+  color: #142B40;
+}
+
+.trk-play-toggle:hover {
+  background-color: #D5BA2B;
+  transform: scale(1.04);
+}
+
+.trk-play-toggle .ico-pause {
+  display: none;
+}
+
+.trk-card.is-playing .trk-play-toggle {
+  background-color: #DFC332;
+  color: #102437;
+}
+
+.trk-card.is-playing .trk-play-toggle .ico-play {
+  display: none;
+}
+
+.trk-card.is-playing .trk-play-toggle .ico-pause {
+  display: block;
+}
+
+/* دکمه کشوی متن قطعه: دایره خطی ظریف کنار دکمه پخش مطابق image-1/2/3.png */
+.trk-lyrics-toggle {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 173, 30, 0.36);
+  color: #D8BE34;
+}
+
+.trk-lyrics-toggle:hover {
+  background-color: rgba(201, 173, 30, 0.14);
+  border-color: rgba(222, 195, 55, 0.72);
+}
+
+.trk-lyrics-toggle .ico-chevron {
+  transition: transform 0.24s ease;
+}
+
+.trk-card.is-lyrics-open .trk-lyrics-toggle {
+  background-color: rgba(201, 173, 30, 0.15);
+  border-color: rgba(222, 195, 55, 0.72);
+}
+
+.trk-card.is-lyrics-open .trk-lyrics-toggle .ico-chevron {
+  transform: rotate(180deg);
+}
+
+/* ---------------- نوار پلیر صوتی قطعه (چپ‌به‌راست دقیقاً مطابق image-2.png) ---------------- */
+.trk-player-row {
+  margin-top: 13px;
+  padding-top: 2px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  direction: ltr;
+}
+
+.trk-time {
+  font-size: 12px;
+  font-weight: 500;
+  color: #9EB6CA;
+  min-width: 36px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+.trk-progress-shell {
+  position: relative;
+  flex: 1;
+  height: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.trk-progress-rail {
+  position: relative;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background-color: rgba(168, 192, 212, 0.22);
+}
+
+.trk-progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 999px;
+  background-color: #C9AD1E;
+  pointer-events: none;
+}
+
+/* دستگیره حلقه‌دار (◉) دقیقاً مانند رفرنس image-2.png */
+.trk-progress-thumb {
+  position: absolute;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #C9AD1E;
+  border: 2px solid #DEC337;
+  box-shadow: inset 0 0 0 2.2px #163047, 0 1px 4px rgba(0, 0, 0, 0.35);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: transform 0.12s ease;
+}
+
+.trk-progress-shell:hover .trk-progress-thumb {
+  transform: translate(-50%, -50%) scale(1.14);
+}
+
+.trk-progress-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* دکمه دایره‌ای دانلود زیر دایره شماره قطعه (سمت راست نوار صوتی — image-2.png) */
+.trk-dl-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 173, 30, 0.34);
+  color: #DEC337;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.trk-dl-btn:hover {
+  background-color: rgba(201, 173, 30, 0.18);
+  border-color: #DEC337;
+}
+
+.trk-dl-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ---------------- کشوی «متن قطعه» با خط‌چین سرتاسری بالا و مصرع‌های یکی‌درمیان (image-3.png) ---------------- */
+.trk-lyrics-drawer {
+  margin: 15px -16px 0;
+  padding: 16px 16px 4px;
+  border-top: 1px dashed rgba(201, 173, 30, 0.34);
+  text-align: center;
+  animation: lyricsFadeIn 0.22s ease;
+}
+
+@keyframes lyricsFadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.trk-lyrics-label {
+  font-size: calc(12px * var(--font-scale, 1));
+  font-weight: 700;
+  color: #DEC337;
+  margin-bottom: 11px;
+}
+
+.trk-lyrics-verses {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.trk-lyric-line {
+  margin: 0;
+  font-size: calc(13.8px * var(--font-scale, 1));
+  line-height: 1.95;
+  max-width: 520px;
+}
+
+.trk-lyric-line.lyric-line-soft {
+  color: rgba(203, 220, 234, 0.72);
+  font-weight: 400;
+}
+
+.trk-lyric-line.lyric-line-bright {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   شبکه نوازندگان و فهرست کادر اجرایی
+   ========================================================================== */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.person-box {
+  background-color: rgba(22, 47, 70, 0.68);
+  border: 1px solid rgba(201, 173, 30, 0.24);
+  border-radius: 11px;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.person-box.is-lead {
+  background-color: rgba(195, 169, 37, 0.12);
+  border-color: rgba(206, 178, 29, 0.52);
+}
+
+.person-name {
+  font-size: calc(14px * var(--font-scale, 1));
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.person-box.is-lead .person-name {
+  color: #E5CA3F;
+}
+
+.person-role {
+  font-size: calc(12px * var(--font-scale, 1));
+  color: #9FB7CB;
+}
+
+.crew-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.crew-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: calc(13.5px * var(--font-scale, 1));
+}
+
+.crew-role {
+  color: #A4BBD0;
+  flex-shrink: 0;
+}
+
+.crew-dots {
+  flex: 1;
+  border-bottom: 1px dashed rgba(201, 173, 30, 0.26);
+  min-width: 16px;
+}
+
+.crew-name {
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* ==========================================================================
+   مکان اجرایی و راهنمای ورود
+   ========================================================================== */
+.venue-title {
+  margin: 0 0 6px;
+  font-size: calc(15.5px * var(--font-scale, 1));
+  font-weight: 700;
+  color: #E3C83D;
+}
+
+.venue-addr {
+  margin: 0 0 12px;
+  font-size: calc(13.5px * var(--font-scale, 1));
+  line-height: 1.85;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.venue-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.venue-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 6px;
+  background-color: rgba(22, 47, 70, 0.76);
+  border: 1px solid rgba(201, 173, 30, 0.36);
+  font-size: calc(12.2px * var(--font-scale, 1));
+  color: #EAF2F8;
+  text-decoration: none;
+}
+
+.venue-chip-link:hover {
+  border-color: #DEC337;
+  color: #DEC337;
+}
+
+.venue-rules {
+  margin: 0 0 16px;
+  padding: 0 18px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: calc(13px * var(--font-scale, 1));
+  line-height: 1.85;
+  color: rgba(232, 240, 247, 0.88);
+}
+
+.venue-rules li::marker {
+  color: #D0B424;
+}
+
+.venue-map-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.map-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 14px;
+  border-radius: 8px;
+  background-color: rgba(195, 169, 37, 0.14);
+  border: 1px solid rgba(201, 173, 30, 0.48);
+  color: #E5CA42;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.map-btn:hover {
+  background-color: #C3A925;
+  border-color: #DEC337;
+  color: #142B40;
+}
+
+.venue-iframe-wrap {
+  margin-top: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(201, 173, 30, 0.35);
+}
+
+.venue-iframe-wrap iframe {
+  width: 100%;
+  height: 220px;
+  border: 0;
+  display: block;
+}
+
+/* ==========================================================================
+   فوتر و لینک‌های مستقیم به https://negahm.ir
+   ========================================================================== */
+.brochure-footer {
+  margin-top: 52px;
+  padding-top: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.footer-brand-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.footer-agency-link {
+  color: #FFFFFF;
+  font-size: calc(14px * var(--font-scale, 1));
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.footer-agency-link:hover {
+  color: #DEC337;
+}
+
+.footer-gold-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #D2B418;
+}
+
+.footer-calligraphy {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-legal-line {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: calc(11.5px * var(--font-scale, 1));
+  color: var(--text-muted, #A9A9A9);
+}
+
+.footer-pipe {
+  opacity: 0.55;
+}
+
+.footer-powered-link {
+  color: #CFDCE8;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.footer-powered-link:hover {
+  color: #DEC337;
+}
+
+/* ==========================================================================
+   مودال اشتراک‌گذاری
+   ========================================================================== */
+.share-backdrop[hidden] {
+  display: none !important;
+}
+
+.share-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(9, 22, 34, 0.76);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.share-dialog {
+  width: 100%;
+  max-width: 430px;
+  background-color: #1F3D57;
+  border: 1px solid rgba(201, 173, 30, 0.62);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.42);
+}
+
+.share-dlg-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.share-dlg-head h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.share-dlg-close {
+  background: transparent;
+  border: 0;
+  color: #C7D6E4;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.share-dlg-desc {
+  margin: 0 0 14px;
+  font-size: 13px;
+  line-height: 1.75;
+  color: #BFD0DF;
+}
+
+.share-copy-box {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.share-copy-box input {
+  flex: 1;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(201, 173, 30, 0.4);
+  background-color: #152E44;
+  color: #EAF2F8;
+  padding: 0 11px;
+  font-size: 12.5px;
+}
+
+.share-copy-box button {
+  height: 38px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 0;
+  background-color: #C3A925;
+  color: #132A3E;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.share-quick-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.share-net-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  border-radius: 8px;
+  background-color: rgba(22, 47, 70, 0.8);
+  border: 1px solid rgba(201, 173, 30, 0.38);
+  color: #EAF2F8;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.share-net-btn:hover {
+  border-color: #DEC337;
+  color: #DEC337;
+}
+
+/* ==========================================================================
+   واکنش‌گرایی موبایل و تبلت
+   ========================================================================== */
+@media (max-width: 740px) {
+  .brochure-page {
+    padding: 20px 14px 48px;
+  }
+
+  .hero-stage {
+    max-width: 92%;
+    height: 330px;
+  }
+
+  .hero-gold-frame {
+    height: 308px;
+  }
+
+  .hero-portrait {
+    height: calc(330px * var(--subj-scale, 1));
+  }
+
+  .hero-logo-seid {
+    left: -10px;
+    top: 112px;
+    width: calc(112px * var(--left-scale, 1));
+  }
+
+  .hero-logo-vahid {
+    right: -22px;
+    top: 116px;
+    width: calc(134px * var(--right-scale, 1));
+  }
+
+  .hero-h1 {
+    font-size: calc(26px * var(--font-scale, 1));
+  }
+
+  .hero-sub {
+    font-size: calc(14.5px * var(--font-scale, 1));
+  }
+
+  .hero-pills-row {
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .brochure-cards {
+    gap: 20px;
+  }
+
+  .b-card {
+    padding: 20px 15px;
+  }
+
+  .trk-card {
+    padding: 12px 12px;
+  }
+
+  .trk-lyrics-drawer {
+    margin: 13px -12px 0;
+    padding: 14px 12px 2px;
+  }
+
+  .people-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-stage {
+    height: 268px;
+  }
+
+  .hero-gold-frame {
+    height: 250px;
+  }
+
+  .hero-portrait {
+    height: calc(268px * var(--subj-scale, 1));
+  }
+
+  .hero-logo-seid {
+    left: -8px;
+    top: 88px;
+    width: calc(92px * var(--left-scale, 1));
+  }
+
+  .hero-logo-vahid {
+    right: -14px;
+    top: 92px;
+    width: calc(108px * var(--right-scale, 1));
+  }
+
+  .hero-h1 {
+    font-size: calc(23px * var(--font-scale, 1));
+  }
+}

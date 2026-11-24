@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "updatedAt": "2026-11-24T17:35:00+03:30"
+  },
+  "seo": {
+    "tabTitle": "بروشور اجرای دیجیتال",
+    "titleSuffix": "تور کنسرت سرزمین پدری استاد وحید تاج",
+    "description": "بروشور اجرای دیجیتال اختصاصی تور کنسرت بزرگ «سرزمین پدری» با عنوان هنری «صید عشق» به خوانندگی استاد وحید تاج — پنجشنبه ۴ آذر ۱۴۰۵، ساعت ۱۸:۳۰، اهواز، هتل پرستیژ. مشاهده فهرست قطعات اجرایی، پخش صوتی، اشعار، نوازندگان، کادر اجرایی و راهنمای ورود.",
+    "keywords": "وحید تاج, بروشور اجرای دیجیتال, بروشور دیجیتال کنسرت, تور کنسرت سرزمین پدری, صید عشق, کنسرت وحید تاج اهواز, هتل پرستیژ اهواز, موسیقی اصیل ایرانی, نگاه مدیا, آژانس تبلیغاتی نگاه",
+    "canonicalUrl": "",
+    "robots": "index, follow, max-image-preview:large, max-snippet:-1",
+    "ogTitle": "بروشور اجرای دیجیتال | تور کنسرت سرزمین پدری — استاد وحید تاج",
+    "ogDescription": "اجرای موسیقی اصیل ایرانی به خوانندگی استاد وحید تاج (صید عشق) | پنجشنبه ۴ آذر ۱۴۰۵ — اهواز، هتل پرستیژ",
+    "ogImage": "assets/images/og-cover.jpg",
+    "favicon": "assets/images/favicon.png",
+    "siteName": "بروشور اجرای دیجیتال | نگاه مدیا",
+    "schemaEnabled": true,
+    "eventStartDateIso": "2026-11-25T18:30:00+03:30",
+    "eventCity": "اهواز",
+    "eventVenueName": "هتل پرستیژ اهواز",
+    "eventAddress": "استان خوزستان، اهواز، بلوار پاسداران، هتل بین‌المللی پرستیژ",
+    "performerName": "وحید تاج",
+    "organizerName": "آژانس تبلیغاتی نگاه",
+    "organizerUrl": "https://negahm.ir",
+    "ticketUrl": "",
+    "customHeadHtml": "",
+    "customBodyEndHtml": ""
+  },
+  "typography": {
+    "mode": "default",
+    "customFontName": "Abar FaNum VF",
+    "variableFontUrl": "",
+    "weights": {
+      "regular": "",
+      "semiBold": "",
+      "bold": "",
+      "extraBold": ""
+    },
+    "uploadedFonts": [],
+    "forcePersianDigits": true,
+    "baseScale": 1,
+    "headingLetterSpacingEm": -0.045
+  },
+  "theme": {
+    "bgCenter": "#244460",
+    "bgEdge": "#16324B",
+    "cardBg": "#23435F",
+    "accentGold": "#C9AD1E",
+    "heroGoldCenter": "#C3A925",
+    "heroGoldEdge": "#BAA12B",
+    "textPrimary": "#FFFFFF",
+    "textMuted": "#A9A9A9",
+    "showSideLines": true,
+    "preserveFigmaMinHeights": true
+  },
+  "hero": {
+    "mainTitle": "تور کنسرت سرزمین پدری",
+    "subtitle": "اجرای موسیقی اصیل ایرانی به خوانندگی استاد وحید تاج",
+    "subjectImage": "assets/images/head-hero.png",
+    "subjectAlt": "استاد وحید تاج — بروشور اجرای دیجیتال تور کنسرت سرزمین پدری",
+    "subjectScale": 100,
+    "leftLogoImage": "assets/images/logo-seid-eshgh.png",
+    "leftLogoAlt": "تایپوگرافی صید عشق",
+    "leftLogoScale": 100,
+    "rightLogoImage": "assets/images/logo-vahid-taj.png",
+    "rightLogoAlt": "تایپوگرافی وحید تاج",
+    "rightLogoScale": 100,
+    "badges": [
+      {
+        "id": "date",
+        "icon": "calendar",
+        "text": "پنجشنبه ۴ آذر ۱۴۰۵",
+        "enabled": true,
+        "action": "none",
+        "url": ""
+      },
+      {
+        "id": "time",
+        "icon": "clock",
+        "text": "ساعت ۱۸:۳۰",
+        "enabled": true,
+        "action": "none",
+        "url": ""
+      },
+      {
+        "id": "location",
+        "icon": "pin",
+        "text": "اهواز، هتل پرستیژ",
+        "enabled": true,
+        "action": "scroll-venue",
+        "url": ""
+      },
+      {
+        "id": "share",
+        "icon": "share",
+        "text": "اشتراک گذاری",
+        "enabled": true,
+        "action": "share",
+        "url": ""
+      }
+    ]
+  },
+  "about": {
+    "enabled": true,
+    "title": "درباره این اجرا",
+    "showDivider": false,
+    "textAlign": "justify",
+    "body": "تور کنسرت بزرگ «سرزمین پدری» با صدای دلنشین استاد وحید تاج و با عنوان هنری «صید عشق» آغاز می‌شود. این کاروان عاشقانه به پاس احترام به زادگاه ایشان، دزفول زیبا، سفر خود را از قلب خوزستان، یعنی شهر پرشور اهواز آغاز می‌کند. پس از این دیدارِ نخستین در اهواز، نوای این ساز و آواز اصیل به راه می‌افتد تا در سراسر پهنه ایرانِ جان طنین‌انداز شود. بیایید تا در این ضیافت هنری، عشق و اصالت را زمزمه کنیم؛ به‌زودی مهمان شهر شما خواهیم بود."
+  },
+  "tracksSection": {
+    "enabled": true,
+    "title": "فهرست قطعات اجرایی",
+    "countBadgeMode": "auto",
+    "customCountText": "۱۱ قطعه",
+    "emptyPlaceholder": "",
+    "items": [
+      {
+        "id": "t1",
+        "title": "پیش‌درآمد صید عشق",
+        "composer": "گروه سرزمین پدری",
+        "poet": "",
+        "arranger": "",
+        "performerNote": "بی‌کلام",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": ""
+      },
+      {
+        "id": "t2",
+        "title": "ساز و آواز «سلسله‌ی موی دوست»",
+        "composer": "بداهه‌نوازی در بیات اصفهان",
+        "poet": "سعدی شیرازی",
+        "arranger": "",
+        "performerNote": "",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": "سلسله‌ی موی دوست حلقه‌ی دام بلاست\nهر که در این حلقه نیست فارغ از این ماجراست\nگر بزنندم به تیغ در نظرش بی‌دریغ\nدیدن او یک نظر صد چو منش خونبهاست\nگر برود جان ما در طلب وصل دوست\nحیف نباشد که دوست دوست‌تر از جان ماست"
+      },
+      {
+        "id": "t3",
+        "title": "تصنیف صید عشق",
+        "composer": "وحید تاج",
+        "poet": "مولانا",
+        "arranger": "آنسامبل سرزمین پدری",
+        "performerNote": "",
+        "audioUrl": "uploads/audio/sample-tasnif.mp3",
+        "allowDownload": true,
+        "lyrics": "مرده بدم زنده شدم گریه بدم خنده شدم\nدولت عشق آمد و من دولت پاینده شدم\nدیده سیر است مرا جان دلیر است مرا\nزهره شیر است مرا زهره تابنده شدم\nگفت که دیوانه نه‌ای لایق این خانه نه‌ای\nرفتم و دیوانه شدم سلسله‌بندنده شدم"
+      },
+      {
+        "id": "t4",
+        "title": "تکنوازی تار",
+        "composer": "",
+        "poet": "",
+        "arranger": "",
+        "performerNote": "به نوازندگی سرپرست گروه",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": ""
+      },
+      {
+        "id": "t5",
+        "title": "چهارمضراب کارون",
+        "composer": "آنسامبل سرزمین پدری",
+        "poet": "",
+        "arranger": "",
+        "performerNote": "بی‌کلام",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": ""
+      },
+      {
+        "id": "t6",
+        "title": "آواز دیار آفتاب (گوشه شوشتری)",
+        "composer": "دستگاه همایون",
+        "poet": "حافظ شیرازی",
+        "arranger": "",
+        "performerNote": "",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": "رواق منظر چشم من آشیانه توست\nکرم نما و فرود آ که خانه خانه توست\nبه لطف خال و خط از عارفان ربودی دل\nلطیفه‌های عجب زیر دام و دانه توست"
+      },
+      {
+        "id": "t7",
+        "title": "تصنیف امید عشق",
+        "composer": "وحید تاج",
+        "poet": "فریدون مشیری",
+        "arranger": "گروه سرزمین پدری",
+        "performerNote": "",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": "بی تو مهتاب‌شبی باز از آن کوچه گذشتم\nهمه تن چشم شدم خیره به دنبال تو گشتم\nشوق دیدار تو لبریز شد از جام وجودم\nشدم آن عاشق دیوانه که بودم"
+      },
+      {
+        "id": "t8",
+        "title": "تکنوازی سنتور",
+        "composer": "",
+        "poet": "",
+        "arranger": "",
+        "performerNote": "بداهه‌نوازی در آواز دشتی",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": ""
+      },
+      {
+        "id": "t9",
+        "title": "ساز و آواز عاشقانه",
+        "composer": "آواز دشتی",
+        "poet": "هوشنگ ابتهاج (سایه)",
+        "arranger": "",
+        "performerNote": "",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": "امشب به قصه دل من گوش می‌کنی\nفردا مرا چو قصه فراموش می‌کنی\nدستم نمی‌رسد که در آغوش گیرمت\nای ماه با که دست در آغوش می‌کنی"
+      },
+      {
+        "id": "t10",
+        "title": "قطعه هم‌نوازی ضیافت",
+        "composer": "گروه سرزمین پدری",
+        "poet": "",
+        "arranger": "",
+        "performerNote": "بی‌کلام",
+        "audioUrl": "",
+        "allowDownload": true,
+        "lyrics": ""
+      },
+      {
+        "id": "t11",
+        "title": "ای ایران",
+        "composer": "روح‌الله خالقی",
+        "poet": "حسین گل‌گلاب",
+        "arranger": "گروه سرزمین پدری",
+        "performerNote": "",
+        "audioUrl": "uploads/audio/sample-tasnif.mp3",
+        "allowDownload": true,
+        "lyrics": "ای ایران ای مرز پرگهر\nای خاکت سرچشمه‌ی هنر\nدور از تو اندیشه‌ی بدان\nپاینده مانی تو جاودان\nای دشمن ار تو سنگ خاره‌ای من آهنم\nجان من فدای خاک پاک میهنم\nمهر تو چون شد پیشه‌ام\nدور از تو نیست اندیشه‌ام\nدر راه تو کی ارزشی دارد این جان ما\nپاینده باد خاک ایران ما\nسنگ کوهت در و گوهر است\nخاک دشتت بهتر از زر است\nمهرت از دل کی برون کنم\nبرگو بی‌مهر تو چون کنم"
+      }
+    ]
+  },
+  "musiciansSection": {
+    "enabled": true,
+    "title": "نوازندگان",
+    "emptyPlaceholder": "",
+    "items": [
+      { "id": "m1", "name": "استاد وحید تاج", "role": "خواننده", "highlight": true },
+      { "id": "m2", "name": "سرپرست گروه و نوازنده تار", "role": "تار و بم‌تار", "highlight": false },
+      { "id": "m3", "name": "نوازنده کمانچه", "role": "کمانچه و کمانچه آلتو", "highlight": false },
+      { "id": "m4", "name": "نوازنده سنتور", "role": "سنتور", "highlight": false },
+      { "id": "m5", "name": "نوازنده عود", "role": "عود (بربط)", "highlight": false },
+      { "id": "m6", "name": "نوازنده نی", "role": "نی هفت‌بند", "highlight": false },
+      { "id": "m7", "name": "نوازنده تنبک", "role": "تنبک", "highlight": false },
+      { "id": "m8", "name": "نوازنده سازهای کوبه‌ای", "role": "دف، دایره و بندیر", "highlight": false }
+    ]
+  },
+  "crewSection": {
+    "enabled": true,
+    "title": "کادر اجرایی",
+    "emptyPlaceholder": "",
+    "items": [
+      { "id": "c1", "role": "تهیه‌کننده و صاحب امتیاز تور", "name": "موسسه فرهنگی هنری سرزمین پدری" },
+      { "id": "c2", "role": "مجری طرح و تبلیغات", "name": "آژانس تبلیغاتی نگاه" },
+      { "id": "c3", "role": "مدیر اجرایی کنسرت اهواز", "name": "ستاد اجرایی تور خوزستان" },
+      { "id": "c4", "role": "مهندسی صدا و آکوستیک", "name": "تیم تخصصی صدابرداری زنده" },
+      { "id": "c5", "role": "طراحی نور و صحنه‌آرایی", "name": "واحد فنی صحنه" },
+      { "id": "c6", "role": "طراحی هویت بصری و بروشور دیجیتال", "name": "نگاه مدیا" }
+    ]
+  },
+  "venueSection": {
+    "enabled": true,
+    "title": "مکان اجرایی و راهنمای ورود",
+    "venueName": "اهواز — تالار بزرگ هتل پرستیژ",
+    "address": "استان خوزستان، اهواز، بلوار پاسداران، مجموعه هتل بین‌المللی پرستیژ",
+    "doorsOpenText": "بازگشایی درهای سالن از ساعت ۱۷:۴۵ | شروع راس ساعت ۱۸:۳۰",
+    "phone": "",
+    "googleMapsUrl": "https://maps.google.com/?q=Ahvaz+Prestige+Hotel",
+    "neshanUrl": "https://neshan.org/maps/search/%D9%87%D8%AA%D9%84+%D9%BE%D8%B1%D8%B3%D8%AA%DB%8C%DA%98+%D8%A7%D9%87%D9%88%D8%A7%D8%B2",
+    "baladUrl": "",
+    "mapEmbedUrl": "",
+    "guidelines": [
+      "لطفاً جهت استقرار آرام در صندلی خود، حداقل ۳۰ دقیقه پیش از آغاز برنامه در محل هتل حضور داشته باشید.",
+      "همراه داشتن بلیت دیجیتال بر روی تلفن همراه یا نسخه چاپی هنگام ورود الزامی است.",
+      "به احترام تمرکز هنرمندان و آرامش مخاطبان، پس از آغاز قطعات درهای سالن بسته شده و ورود در فاصله بین قطعات انجام می‌گیرد.",
+      "لطفاً تلفن همراه خود را در طول اجرای برنامه در حالت سکوت قرار دهید."
+    ]
+  },
+  "customSections": [],
+  "sectionOrder": ["about", "tracks", "musicians", "crew", "venue"],
+  "footer": {
+    "agencyText": "آژانس تبلیغاتی نگاه",
+    "agencyUrl": "https://negahm.ir",
+    "showDot": true,
+    "showVahidLogo": true,
+    "footerLogoImage": "assets/images/logo-vahid-taj.png",
+    "copyrightPrefix": "بروشور دیجیتال اختصاصی تور کنسرت سرزمین پدری",
+    "poweredByText": "قدرت گرفته از نگاه مدیا",
+    "poweredByUrl": "https://negahm.ir",
+    "copyrightYear": "© ۱۴۰۵"
+  }
+}

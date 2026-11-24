@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /data/
+Disallow: /includes/
+Sitemap: https://negahm.ir/vahid-taj/sitemap.xml
+Sitemap: https://negahm.ir/vahidtaj/sitemap.xml
